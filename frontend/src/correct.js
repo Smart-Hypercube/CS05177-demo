@@ -39,7 +39,7 @@ export default function Correct({ image, onFinish }) {
   const [imgRect, setImgRect] = useState();
   const levels_default = {};
   for (let r of image.rects) {
-    levels_default[r.id] = 0;
+    levels_default[r.id] = r.level === 3 ? 3 : 0;
   }
   const [levels, setLevels] = useState(levels_default);
   const hover_default = {};
